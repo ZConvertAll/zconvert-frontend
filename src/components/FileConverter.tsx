@@ -36,7 +36,7 @@ const FileConverter: React.FC<FileConverterProps> = ({ type }) => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [serverUrl, setServerUrl] = useState(localStorage.getItem('zconvert-server-url') || '');
+  const [serverUrl, setServerUrl] = useState(localStorage.getItem('zconvert-server-url') || 'https://your-backend-url.onrender.com');
   const [showServerConfig, setShowServerConfig] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -659,6 +659,7 @@ const FileConverter: React.FC<FileConverterProps> = ({ type }) => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Button>
+            
           </div>
           
           {/* Title */}
