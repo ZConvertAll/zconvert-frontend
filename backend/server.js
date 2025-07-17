@@ -46,11 +46,6 @@ app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Health check: http://localhost:${PORT}/health`);
-});
-
 module.exports = app;
 
 console.log('✅ Server started on http://localhost:8080');
